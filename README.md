@@ -1,34 +1,96 @@
-# MOBILISE
+<div align="center">
 
-**Distributed Operational Readiness System for NS Mobilisation**
+# 🛡️ MOBILISE
 
-> "Operational Readiness Begins Before Mobilisation"
+### Distributed Operational Readiness System for NS Mobilisation
 
-## Overview
+*"Operational Readiness Begins Before Mobilisation"*
 
-MOBILISE is a comprehensive web application designed to enhance the NS experience by streamlining field-pack verification, mobilisation coordination, and unit readiness management. Built for CODE_EXP 2026 (BrainHack).
+[![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)
 
-### Key Features
+[🚀 Live Demo](#) • [📖 Documentation](SUBMISSION.md) • [🏆 Competition](#about-codeexp-2026)
 
-1. **Edge-AI Pack Verification** - Offline-capable AI-powered equipment scanning
-2. **Readiness Dashboard** - Real-time operational readiness tracking
-3. **Commander Dashboard** - Platoon-level readiness heatmaps and analytics
-4. **Buddy Coordination Engine** - Smart equipment sharing and support matching
-5. **SAF100 Acknowledgement Flow** - Streamlined mobilisation confirmation
-6. **Operational Alerts** - Critical notifications and reminders
-7. **Equipment Checklist** - Comprehensive tracking with expiry management
+</div>
 
-## Tech Stack
+---
 
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Design System**: Military-inspired dark theme
-- **Deployment**: Vercel-ready
+## 🎯 Overview
 
-## Getting Started
+**MOBILISE** is a cutting-edge web application that transforms NS mobilisation preparation from reactive coordination into **proactive operational confidence**. Built for **CODE_EXP 2026** (BrainHack), it addresses the critical challenge of streamlining field-pack verification and mobilisation readiness.
 
-First, run the development server:
+### ✨ Key Features
+
+| Feature | Description |
+|---------|-------------|
+| 🤖 **Edge-AI Pack Verification** | Offline-capable AI-powered equipment scanning with 92-98% confidence |
+| 📊 **Readiness Dashboard** | Real-time operational readiness tracking with 78% score visualization |
+| 🎖️ **Commander Dashboard** | Platoon-level readiness heatmaps and analytics for 8+ personnel |
+| 🤝 **Buddy Coordination** | Smart equipment sharing within 1.2-4.5km proximity |
+| ✅ **SAF100 Digital Flow** | Streamlined mobilisation acknowledgement process |
+| 🔔 **Operational Alerts** | Critical notifications with expiry tracking and RED warnings |
+| 📋 **Equipment Checklist** | Comprehensive tracking across 4 categories (32 items) |
+
+---
+
+## 🎨 Design System
+
+### Modern Glassmorphism UI
+
+- **Backdrop Blur Effects** - Professional glassmorphism with 10-20px blur
+- **Radial Gradients** - Ambient background lighting for depth
+- **Shadow Layers** - Multi-level shadows for elevation hierarchy
+- **Animated Elements** - Smooth transitions, hover effects, and shimmer animations
+- **Color Palette** - Military-inspired with transparency
+
+### Color Scheme
+
+```css
+Primary:     #1E3A5F (Navy Blue - Operational Authority)
+Accent:      #059669 (Operational Green - Readiness)
+Secondary:   #2563EB (Bright Blue - Actions)
+Background:  Radial Gradient (0A0E17 → 1a1f2e → 000000)
+Glass Cards: rgba(17, 24, 39, 0.7) + backdrop-blur
+```
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | Next.js 14 (App Router) + React 19 |
+| **Language** | TypeScript 5.0 |
+| **Styling** | Tailwind CSS 3.4 + Custom Glassmorphism |
+| **Design** | Inter Font + Modern UI/UX Principles |
+| **Deployment** | Vercel-ready, Production Optimized |
+
+</div>
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+```bash
+Node.js 18+ 
+npm or yarn
+```
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/minuttt/mobilise.git
+cd mobilise
+
+# Install dependencies
+npm install
 
 ```bash
 npm run dev
