@@ -1,4 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MOBILISE
+
+**Distributed Operational Readiness System for NS Mobilisation**
+
+> "Operational Readiness Begins Before Mobilisation"
+
+## Overview
+
+MOBILISE is a comprehensive web application designed to enhance the NS experience by streamlining field-pack verification, mobilisation coordination, and unit readiness management. Built for CODE_EXP 2026 (BrainHack).
+
+### Key Features
+
+1. **Edge-AI Pack Verification** - Offline-capable AI-powered equipment scanning
+2. **Readiness Dashboard** - Real-time operational readiness tracking
+3. **Commander Dashboard** - Platoon-level readiness heatmaps and analytics
+4. **Buddy Coordination Engine** - Smart equipment sharing and support matching
+5. **SAF100 Acknowledgement Flow** - Streamlined mobilisation confirmation
+6. **Operational Alerts** - Critical notifications and reminders
+7. **Equipment Checklist** - Comprehensive tracking with expiry management
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Design System**: Military-inspired dark theme
+- **Deployment**: Vercel-ready
 
 ## Getting Started
 
