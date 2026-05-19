@@ -25,10 +25,11 @@ export default function LoginPage() {
         {/* Logo Section */}
         <div className="text-center space-y-6">
           <div className="flex justify-center mb-6">
-            <div className="relative">
+            <div className="relative group cursor-pointer">
               <div className="absolute inset-0 bg-accent/30 rounded-2xl blur-xl animate-pulse-slow"></div>
-              <div className="relative w-24 h-24 bg-gradient-to-br from-accent to-accent-dark rounded-2xl flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-500 shadow-glass accent-glow">
-                <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="relative w-24 h-24 bg-gradient-to-br from-accent to-accent-dark rounded-2xl flex items-center justify-center transform rotate-3 group-hover:rotate-0 group-hover:scale-110 transition-all duration-500 shadow-glass accent-glow">
+                <svg className="w-14 h-14 text-white group-hover:scale-110 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
@@ -54,9 +55,10 @@ export default function LoginPage() {
             <button
               onClick={handleLogin}
               disabled={isLoading}
-              className="group/btn w-full touch-target bg-gradient-to-r from-accent to-accent-dark hover:from-accent-light hover:to-accent text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none shadow-accent hover:shadow-[0_0_30px_rgba(5,150,105,0.4)] relative overflow-hidden"
+              className="group/btn w-full touch-target bg-gradient-to-r from-accent via-accent to-accent-dark hover:from-accent-light hover:via-accent hover:to-accent text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-0.5 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none shadow-accent hover:shadow-[0_0_40px_rgba(5,150,105,0.6)] relative overflow-hidden micro-interaction"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
               {isLoading ? (
                 <span className="flex items-center justify-center relative z-10">
                   <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-white" fill="none" viewBox="0 0 24 24">

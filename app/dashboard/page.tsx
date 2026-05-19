@@ -41,21 +41,23 @@ export default function DashboardPage() {
                   <div className="metric-badge px-2 py-0.5 rounded-full text-xs font-bold text-accent">Active</div>
                 </div>
                 <div className="flex items-baseline space-x-3 mb-6">
-                  <span className="text-6xl font-extrabold gradient-text">{readinessScore}%</span>
+                  <span className="text-6xl font-extrabold gradient-text stat-number">{readinessScore}%</span>
                   <div className="space-y-0.5">
                     <span className="block text-sm text-foreground font-semibold">Operational Ready</span>
-                    <span className="block text-xs text-foreground-muted">+5% from last week</span>
+                    <span className="block text-xs text-accent font-medium">↗ +5% from last week</span>
                   </div>
                 </div>
-                <div className="relative">
-                  <div className="w-full h-4 bg-background-elevated/60 rounded-full overflow-hidden backdrop-blur-sm">
+                <div className="relative progress-glow">
+                  <div className="w-full h-4 bg-background-elevated/60 rounded-full overflow-hidden backdrop-blur-sm border border-border/20">
                     <div
                       className="h-full bg-gradient-to-r from-accent via-accent-light to-accent rounded-full transition-all duration-1000 ease-out shadow-accent relative overflow-hidden"
                       style={{ width: `${readinessScore}%` }}
                     >
                       <div className="absolute inset-0 shimmer"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
                     </div>
                   </div>
+                  <div className="absolute -top-1 -bottom-1 rounded-full bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 blur-sm transition-all duration-1000" style={{ width: `${readinessScore}%`, left: 0 }}></div>
                 </div>
               </div>
               <div className="ml-8 relative">
@@ -97,58 +99,62 @@ export default function DashboardPage() {
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-foreground px-2">Quick Actions</h2>
           <div className="grid grid-cols-2 gap-4">
-            <Link href="/verify" className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300 transform hover:scale-[1.02] group">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent/30 to-accent/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-accent/20">
-                  <svg className="w-9 h-9 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/verify" className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300 hover-lift micro-interaction group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="flex flex-col items-center text-center space-y-4 relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-accent/30 to-accent/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 border border-accent/20 shadow-lg shadow-accent/20">
+                  <svg className="w-9 h-9 text-accent group-hover:text-accent-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-lg">Verify Pack</p>
+                  <p className="font-bold text-foreground text-lg group-hover:text-accent transition-colors">Verify Pack</p>
                   <p className="text-xs text-foreground-muted mt-1.5 font-medium">Edge-AI Scan</p>
                 </div>
               </div>
             </Link>
 
-            <Link href="/checklist" className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300 transform hover:scale-[1.02] group">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-secondary/20">
-                  <svg className="w-9 h-9 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/checklist" className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300 hover-lift micro-interaction group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="flex flex-col items-center text-center space-y-4 relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 border border-secondary/20 shadow-lg shadow-secondary/20">
+                  <svg className="w-9 h-9 text-secondary group-hover:text-secondary-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-lg">Checklist</p>
+                  <p className="font-bold text-foreground text-lg group-hover:text-secondary transition-colors">Checklist</p>
                   <p className="text-xs text-foreground-muted mt-1.5 font-medium">Equipment Status</p>
                 </div>
               </div>
             </Link>
 
-            <Link href="/buddy" className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300 transform hover:scale-[1.02] group">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-warning/30 to-warning/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-warning/20">
-                  <svg className="w-9 h-9 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/buddy" className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300 hover-lift micro-interaction group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-warning/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="flex flex-col items-center text-center space-y-4 relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-warning/30 to-warning/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 border border-warning/20 shadow-lg shadow-warning/20">
+                  <svg className="w-9 h-9 text-warning group-hover:text-warning-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-lg">Buddy System</p>
+                  <p className="font-bold text-foreground text-lg group-hover:text-warning transition-colors">Buddy System</p>
                   <p className="text-xs text-foreground-muted mt-1.5 font-medium">Coordination</p>
                 </div>
               </div>
             </Link>
 
-            <Link href="/notifications" className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300 transform hover:scale-[1.02] group relative">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-destructive/30 to-destructive/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-destructive/20 relative">
-                  <svg className="w-9 h-9 text-destructive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/notifications" className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300 hover-lift micro-interaction group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="flex flex-col items-center text-center space-y-4 relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-destructive/30 to-destructive/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 border border-destructive/20 shadow-lg shadow-destructive/20 relative">
+                  <svg className="w-9 h-9 text-destructive group-hover:text-destructive-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                   </svg>
-                  <span className="absolute -top-2 -right-2 w-6 h-6 bg-destructive rounded-full text-xs flex items-center justify-center text-white font-bold shadow-lg animate-pulse">3</span>
+                  <span className="absolute -top-2 -right-2 w-6 h-6 bg-destructive rounded-full text-xs flex items-center justify-center text-white font-bold shadow-lg status-indicator">3</span>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-lg">Alerts</p>
+                  <p className="font-bold text-foreground text-lg group-hover:text-destructive transition-colors">Alerts</p>
                   <p className="text-xs text-foreground-muted mt-1.5 font-medium">3 Pending</p>
                 </div>
               </div>
@@ -160,8 +166,8 @@ export default function DashboardPage() {
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-foreground px-2">Recent Alerts</h2>
           <div className="space-y-3">
-            <div className="glass-card p-4 flex items-start space-x-4 hover:shadow-glass-lg transition-all duration-300">
-              <div className="w-2.5 h-2.5 mt-2 bg-destructive rounded-full flex-shrink-0 shadow-lg shadow-destructive/50 animate-pulse" />
+            <div className="glass-card p-4 flex items-start space-x-4 hover:shadow-glass-lg transition-all duration-300 hover-lift cursor-pointer group">
+              <div className="w-2.5 h-2.5 mt-2 bg-destructive rounded-full flex-shrink-0 shadow-lg shadow-destructive/50 status-indicator" />
               <div className="flex-1">
                 <p className="font-bold text-foreground">Field dressing expires soon</p>
                 <p className="text-sm text-foreground-muted mt-1.5">Expiry date: 28 May 2026 (13 days)</p>
