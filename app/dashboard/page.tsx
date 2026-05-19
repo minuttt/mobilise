@@ -32,7 +32,10 @@ export default function DashboardPage() {
           </div>
 
           {/* Readiness Score Card */}
-          <div className="glass-premium p-9 relative overflow-hidden group">
+          <div className="glass-exhibition p-9 relative overflow-hidden group gradient-border-animated">
+            {/* Noise texture overlay for premium feel */}
+            <div className="absolute inset-0 bg-noise opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
+
             <div className="absolute inset-0 bg-gradient-to-br from-accent/12 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <div className="flex items-center justify-between relative z-10">
               <div className="flex-1">
@@ -41,30 +44,40 @@ export default function DashboardPage() {
                   <div className="metric-badge px-3 py-1 rounded-full text-xs font-bold text-accent border border-accent/30">Active</div>
                 </div>
                 <div className="flex items-baseline space-x-4 mb-7">
-                  <span className="text-7xl font-extrabold gradient-text-glow stat-number" style={{letterSpacing: '-0.04em'}}>{readinessScore}%</span>
+                  <span className="text-fluid-hero gradient-text-premium stat-number">{readinessScore}%</span>
                   <div className="space-y-1">
                     <span className="block text-base text-foreground font-bold">Operational Ready</span>
-                    <span className="block text-sm text-accent font-semibold">↗ +5% from last week</span>
+                    <span className="block text-sm font-semibold animate-glow-pulse" style={{color: '#10B981'}}>↗ +5% from last week</span>
                   </div>
                 </div>
                 <div className="relative progress-glow">
-                  <div className="w-full h-5 bg-background-elevated/70 rounded-full overflow-hidden backdrop-blur-md border border-border/30 shadow-inner">
+                  <div className="w-full h-6 bg-background-elevated/70 rounded-full overflow-visible backdrop-blur-md border border-border/30 shadow-inner-glow-strong relative">
+                    {/* Milestone markers at 25%, 50%, 75% */}
+                    <div className="progress-milestones">
+                      <div className="progress-milestone"></div>
+                      <div className="progress-milestone"></div>
+                      <div className="progress-milestone"></div>
+                    </div>
+
                     <div
-                      className="h-full bg-gradient-to-r from-accent via-accent-light to-accent rounded-full transition-all duration-1200 ease-out shadow-accent-glow relative overflow-hidden"
+                      className="h-full bg-gradient-to-r from-accent-400 via-accent-500 to-accent-600 rounded-full transition-all duration-1200 ease-out shadow-glow-intense relative overflow-hidden"
                       style={{ width: `${readinessScore}%` }}
                     >
                       <div className="absolute inset-0 shimmer"></div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
-                      <div className="absolute inset-0 bg-gradient-to-b from-white/15 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent"></div>
+
+                      {/* Animated glow at completion edge */}
+                      <div className="absolute right-0 top-0 bottom-0 w-1 bg-white/60 blur-sm animate-pulse"></div>
                     </div>
                   </div>
-                  <div className="absolute -top-1.5 -bottom-1.5 rounded-full bg-gradient-to-r from-accent/0 via-accent/35 to-accent/0 blur-md transition-all duration-1200" style={{ width: `${readinessScore}%`, left: 0 }}></div>
+                  <div className="absolute -top-2 -bottom-2 rounded-full bg-gradient-to-r from-accent/0 via-accent/40 to-accent/0 blur-lg transition-all duration-1200" style={{ width: `${readinessScore}%`, left: 0 }}></div>
                 </div>
               </div>
               <div className="ml-10 relative">
-                <div className="absolute inset-0 bg-accent/25 rounded-3xl blur-2xl animate-pulse-slow"></div>
-                <div className="relative w-24 h-24 bg-gradient-to-br from-accent/25 to-accent/8 rounded-3xl flex items-center justify-center backdrop-blur-md border border-accent/30 shadow-accent">
-                  <svg className="w-14 h-14 text-accent drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent-400/30 to-accent-600/20 rounded-3xl blur-2xl animate-glow-pulse"></div>
+                <div className="relative w-24 h-24 bg-gradient-to-br from-accent-500/30 to-accent-700/15 rounded-3xl flex items-center justify-center backdrop-blur-md border border-accent/40 shadow-accent-strong">
+                  <svg className="w-14 h-14 icon-gradient drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
@@ -90,7 +103,7 @@ export default function DashboardPage() {
                 <p className="text-4xl font-extrabold text-foreground stat-number">{ictDays} <span className="text-2xl text-foreground-muted font-bold">days</span></p>
               </div>
             </div>
-            <Link href="/acknowledge" className="px-7 py-3.5 bg-gradient-to-r from-accent via-accent to-accent-dark text-white rounded-xl font-bold hover:from-accent-light hover:to-accent transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-accent hover:shadow-accent-glow text-base">
+            <Link href="/acknowledge" className="button-premium px-7 py-3.5 text-white rounded-xl font-bold text-base">
               Review
             </Link>
           </div>
