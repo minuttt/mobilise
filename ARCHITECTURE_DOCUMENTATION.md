@@ -295,33 +295,45 @@
 - **LocalStorage**: User preferences, JWT token
 - **Cache API**: Static assets, API responses
 
-#### 3.2 Edge-AI Inference Layer
+#### 3.2 Edge-AI Pre-Pack Verification Layer
 
 **Technology**:
 - **Mobile**: TensorFlow Lite (iOS/Android)
 - **Browser**: ONNX Runtime Web
 - **Fallback**: Server-side inference (optional)
 
+**Use Case - Pre-Pack Verification**:
+- **Problem Addressed**: Cannot scan items inside packed field pack (bulky bag with depth)
+- **Practical Solution**: NSman lays equipment flat on table/floor BEFORE packing
+- **Workflow**: 
+  1. Spread items on flat surface with clear spacing
+  2. Take overhead photo (birds-eye view)
+  3. AI analyzes equipment layout locally
+  4. Identifies detected vs. missing items
+  5. NSman packs systematically with confidence
+
 **Model Architecture**:
 - **Base Model**: MobileNetV3-Small (optimized for mobile)
-- **Task**: Object detection (equipment items)
-- **Input**: 224x224 RGB images
+- **Task**: Object detection for flat-laid equipment layouts
+- **Input**: Overhead photos (224x224 RGB images, resized from camera)
 - **Output**: Bounding boxes + class labels + confidence scores
 - **Classes**: 32 equipment categories (Field Pack, Uniform, Medical, etc.)
+- **Optimized For**: Top-down view of spread-out items on flat surfaces
 
 **Training**:
-- **Dataset**: Synthetic images (Blender 3D renders)
-- **Size**: 50,000 training images, 10,000 validation
-- **Augmentation**: Rotation, scaling, lighting variations
+- **Dataset**: Synthetic overhead layout images (Blender 3D renders)
+- **Size**: 50,000 training images (overhead angles), 10,000 validation
+- **Augmentation**: Rotation, scaling, lighting variations, background textures
 - **Framework**: TensorFlow 2.x
 - **Quantization**: INT8 quantization for mobile deployment
 - **Model Size**: <5 MB (optimized)
 
 **Performance**:
 - **Inference Time**: <500ms on mid-range mobile devices
-- **Accuracy**: 92-98% confidence for common items
+- **Accuracy**: 92-98% confidence for common items in flat layouts
 - **Privacy**: 100% local processing, no image transmission
 - **Offline**: Fully functional without internet
+- **Practical**: Works with real-world preparation scenarios
 
 ---
 

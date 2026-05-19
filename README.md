@@ -32,7 +32,7 @@
 | 📋 **Unit-Specific Checklists** | Version-controlled SOPs with battalion/company overrides | Unit SOP fragmentation |
 | 🚨 **Expiry Monitoring System** | Proactive FAD/battery tracking with RED ZONE alerts | Silent equipment expiry |
 | 🎖️ **Commander Dashboard** | Readiness heatmaps, acknowledgement tracking, preparation gaps | Manual admin chasing |
-| 🤖 **Edge-AI Verification** | Offline privacy-preserving equipment scanning (92-98% confidence) | Preparation assistance |
+| 🤖 **Pre-Pack Verification** | Offline AI analyzes equipment layouts before packing (92-98% confidence) | Preparation assistance |
 | 🤝 **Buddy Coordination** | Smart equipment sharing within 1.2-4.5km proximity | Equipment shortages |
 | ✅ **SAF100 Digital Flow** | Streamlined mobilisation acknowledgement process | Acknowledgement tracking |
 | 🔔 **Operational Alerts** | Critical notifications with countdown timers | Preparation awareness |

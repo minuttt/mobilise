@@ -41,8 +41,8 @@ export default function VerifyPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h1 className="text-2xl font-bold text-foreground">Edge-AI Pack Verification</h1>
-              <p className="text-sm text-foreground-muted mt-1">Scan your field pack for readiness check</p>
+              <h1 className="text-2xl font-bold text-foreground">Pre-Pack Verification</h1>
+              <p className="text-sm text-foreground-muted mt-1">Verify equipment before packing</p>
             </div>
           </div>
 
@@ -82,8 +82,8 @@ export default function VerifyPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <div>
-                      <p className="text-lg font-semibold text-foreground">Ready to Scan</p>
-                      <p className="text-sm text-foreground-muted mt-2">Place your field pack in view and tap scan</p>
+                      <p className="text-lg font-semibold text-foreground">Ready to Verify</p>
+                      <p className="text-sm text-foreground-muted mt-2">Lay equipment flat on surface and take photo</p>
                     </div>
                   </div>
                 )}
@@ -94,7 +94,7 @@ export default function VerifyPage() {
                 disabled={isScanning}
                 className="w-full touch-target bg-accent hover:bg-accent-light text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
               >
-                {isScanning ? 'Scanning...' : 'Start Verification Scan'}
+                {isScanning ? 'Analyzing Photo...' : 'Take Photo & Verify'}
               </button>
             </div>
 
@@ -105,22 +105,22 @@ export default function VerifyPage() {
                 <div className="flex items-start space-x-3">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">1</div>
                   <div>
-                    <p className="font-medium text-foreground">Spread out your equipment</p>
-                    <p className="text-sm text-foreground-muted mt-1">Lay items flat with clear visibility</p>
+                    <p className="font-medium text-foreground">Lay out equipment flat</p>
+                    <p className="text-sm text-foreground-muted mt-1">Before packing, spread items on table/floor with clear spacing</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">2</div>
                   <div>
-                    <p className="font-medium text-foreground">Start the scan</p>
-                    <p className="text-sm text-foreground-muted mt-1">Edge-AI detects items in real-time</p>
+                    <p className="font-medium text-foreground">Take overhead photo</p>
+                    <p className="text-sm text-foreground-muted mt-1">Edge-AI analyzes equipment layout locally on-device</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">3</div>
                   <div>
-                    <p className="font-medium text-foreground">Review results</p>
-                    <p className="text-sm text-foreground-muted mt-1">Check detected and missing items</p>
+                    <p className="font-medium text-foreground">Review & pack confidently</p>
+                    <p className="text-sm text-foreground-muted mt-1">Check detected items, find missing ones, then pack systematically</p>
                   </div>
                 </div>
               </div>

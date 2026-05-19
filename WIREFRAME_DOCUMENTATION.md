@@ -210,25 +210,26 @@ Scan and verify packed equipment using Edge-AI detection
 ### Key Elements:
 
 **Header**:
-- **Title**: "Pack Verification"
-- **Subtitle**: "Edge-AI Equipment Scan"
+- **Title**: "Pre-Pack Verification"
+- **Subtitle**: "Verify Before You Pack"
 - **Offline Indicator**: 
   - Badge: "Offline Verification Active"
   - Icon: Wi-Fi off + checkmark
   - Color: Cyan accent
 
-**Scan Interface** (main card):
-- **Camera Placeholder**:
+**Verification Interface** (main card):
+- **Photo Capture Area**:
   - Background: Dark gradient with tactical grid overlay
   - Icon: Camera symbol (large, centered)
-  - Text: "Tap to scan equipment"
+  - Text: "Lay equipment flat and take overhead photo"
   - Border: Dashed cyan tactical border
+  - Helper text: "Spread items on table/floor with clear spacing"
 
-- **Scan Button**:
-  - Text: "Start Verification Scan"
+- **Capture Button**:
+  - Text: "Take Photo & Verify"
   - Background: Gradient cyan (from-accent to-accent-700)
-  - Icon: Camera icon + sparkles (AI indicator)
-  - Loading State: Animated scanning bars
+  - Icon: Camera icon + layout grid icon
+  - Loading State: "Analyzing Photo..." with animated bars
 
 **Verification Results** (after scan):
 - **Readiness Score**: "75%" 
@@ -290,16 +291,21 @@ Scan and verify packed equipment using Edge-AI detection
 
 **User Flow**:
 - Accessed from Dashboard quick actions
-- Scan equipment pile
-- Review detected vs. missing items
-- Take action (save, find buddy, re-scan)
+- **Step 1**: Lay out all equipment flat on table/floor
+- **Step 2**: Take overhead photo (birds-eye view)
+- **Step 3**: AI analyzes equipment layout locally
+- **Step 4**: Review detected vs. missing items
+- **Step 5**: Take action (save, find buddy, re-take photo)
+- **Step 6**: Pack systematically with confidence
 - Return to dashboard with updated readiness
 
 **Design Notes**:
+- **Practical approach**: Cannot scan inside packed bag (bulky field pack has depth)
+- **Pre-pack verification**: Ensures completeness BEFORE packing
 - Emphasize offline capability (privacy-preserving)
 - Clear visual distinction: Detected (cyan) vs. Missing (red)
 - Confidence percentages for transparency
-- AI powered but not oversold
+- AI powered but not oversold - practical assistance
 
 ---
 

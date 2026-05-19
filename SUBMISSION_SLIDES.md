@@ -213,31 +213,38 @@
 
 ---
 
-# SLIDE 9 — FEATURE 4: EDGE-AI VERIFICATION ASSISTANT
+# SLIDE 9 — FEATURE 4: PRE-PACK VERIFICATION ASSISTANT
 
-## Lightweight Preparation Assistance
+## Practical AI-Assisted Verification
 
 ### Important: We DO NOT oversell AI
-**Positioning**: "Edge-AI verification runs locally on-device, ensuring operational privacy while simplifying mobilisation preparation."
+**Positioning**: "Pre-pack verification uses Edge-AI to analyze equipment layouts BEFORE packing, ensuring operational privacy while simplifying preparation."
 
-### Key Features:
-✓ Verify packed equipment through scanning
-✓ Detect missing items (e.g., Black Tape, Lighter)
-✓ Simplify preparation workflow
-✓ **Offline capability** - no internet required
-✓ **Privacy-preserving** - no image transmission
+### How It Works (Practical Solution):
+✓ **Step 1**: NSman lays out equipment flat on table/floor
+✓ **Step 2**: Takes overhead photo of spread-out items
+✓ **Step 3**: Edge-AI analyzes layout and identifies items
+✓ **Step 4**: Shows detected vs. missing items
+✓ **Step 5**: NSman packs systematically with confidence
+
+### Why This Is Practical:
+- **Cannot scan inside packed bag** (bulky field pack has depth)
+- **Pre-pack verification** ensures completeness BEFORE packing
+- **Flat layout** allows clear visual recognition
+- **Offline capability** - no internet required
+- **Privacy-preserving** - no image transmission
 
 ### Technical Approach:
 - TensorFlow Lite on-device inference
-- Synthetic training datasets
-- Low-bandwidth resilience
+- Overhead layout detection (synthetic training datasets)
+- Object detection optimized for flat surface arrangements
 
 ### Impact:
-- **Reduced preparation errors**
-- **Faster verification** than manual checking
-- **Privacy maintained** (local processing only)
+- **Eliminates missing items** (catch issues before packing)
+- **Faster verification** than manual checklist
+- **Privacy maintained** (100% local processing)
 
-**Visual**: Phone screen showing scan interface with detected items
+**Visual**: Phone screen showing overhead photo of laid-out equipment with detection overlays
 
 ---
 

@@ -52,7 +52,7 @@
   1. Unit-specific checklist with 78% completion
   2. RED ZONE expiry alert for field dressing
   3. Commander dashboard with heatmap (8 personnel)
-  4. Edge-AI scan detecting equipment
+  4. **Pre-pack verification**: Equipment laid flat on table → overhead photo → AI analysis showing detected items
   5. Buddy coordination matching spare items
   6. SAF100 acknowledgement confirmation
 
@@ -60,7 +60,7 @@
 > "Introducing MOBILISE — a centralized readiness platform built around actual operational friction points. Unit-specific checklists. Expiry monitoring with RED ZONE alerts. Commander coordination dashboard. Buddy support."
 
 **CRITICAL LINE**:
-> "Built with offline Edge-AI verification, ensuring operational privacy and connectivity resilience."
+> "Pre-pack verification uses offline Edge-AI to analyze equipment layouts before packing — ensuring operational privacy and practical preparation."
 
 **On-screen text**: "From Notification to Combat-Ready"
 
