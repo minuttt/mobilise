@@ -9,47 +9,48 @@ export default {
   theme: {
     extend: {
       colors: {
+        // SAF-inspired operational colors
         primary: {
-          DEFAULT: '#1E3A5F',
-          light: '#2A5080',
-          dark: '#152B47',
+          DEFAULT: '#1A365D', // Deep Navy (SAF Authority)
+          light: '#2C5282',
+          dark: '#0F2744',
         },
         secondary: {
-          DEFAULT: '#2563EB',
-          light: '#3B82F6',
-          dark: '#1D4ED8',
+          DEFAULT: '#3B82F6', // Bright Blue (Action)
+          light: '#60A5FA',
+          dark: '#2563EB',
         },
         accent: {
-          DEFAULT: '#059669',
+          DEFAULT: '#059669', // SAF Green (Readiness)
           light: '#10B981',
           dark: '#047857',
         },
         background: {
-          DEFAULT: '#0A0E17',
-          card: 'rgba(17, 24, 39, 0.7)',
-          elevated: 'rgba(31, 41, 55, 0.6)',
+          DEFAULT: '#0A0E17', // Deep space
+          card: 'rgba(15, 23, 42, 0.75)', // Richer card bg
+          elevated: 'rgba(30, 41, 59, 0.65)',
         },
         foreground: {
-          DEFAULT: '#F9FAFB',
-          muted: '#9CA3AF',
-          dim: '#6B7280',
+          DEFAULT: '#F8FAFC', // Crisp white
+          muted: '#94A3B8', // Slate gray
+          dim: '#64748B',
         },
         border: {
-          DEFAULT: 'rgba(55, 65, 81, 0.3)',
-          light: 'rgba(75, 85, 99, 0.4)',
+          DEFAULT: 'rgba(71, 85, 105, 0.3)',
+          light: 'rgba(100, 116, 139, 0.4)',
         },
         destructive: {
-          DEFAULT: '#DC2626',
+          DEFAULT: '#DC2626', // RED ZONE
           light: '#EF4444',
           dark: '#B91C1C',
         },
         success: {
-          DEFAULT: '#059669',
+          DEFAULT: '#059669', // Match accent
           light: '#10B981',
           dark: '#047857',
         },
         warning: {
-          DEFAULT: '#F59E0B',
+          DEFAULT: '#F59E0B', // Amber alert
           light: '#FBBF24',
           dark: '#D97706',
         },

@@ -11,33 +11,49 @@
 
 ## Executive Summary
 
-**MOBILISE** is a Distributed Operational Readiness System designed to transform NS mobilisation preparation from reactive coordination into proactive operational confidence.
+**MOBILISE** is a Smart Mobilisation Preparation & Readiness Platform designed to transform NS mobilisation preparation from reactive coordination into proactive operational confidence.
 
-### The Problem
+**Tagline**: "From Notification to Combat-Ready"
 
-Current mobilisation workflows suffer from:
-- Fragmented communication (WhatsApp, PDF checklists, manual coordination)
-- Last-minute preparation stress and forgotten equipment
-- No readiness visibility for commanders
-- High operational friction during ICTs
-- Manual verification processes with high error rates
+### The Core Problem
 
-### Our Solution
+**Existing mobilisation preparation workflows are fragmented, inconsistent, and difficult to track.**
 
-MOBILISE provides:
-1. **Edge-AI Field Pack Verification** - Offline-capable equipment detection
-2. **Real-Time Readiness Analytics** - Commander dashboards with heatmaps
-3. **Distributed Buddy Support** - Smart equipment coordination within units
-4. **Streamlined SAF100 Acknowledgement** - Digital mobilisation confirmation
-5. **Operational Alert System** - Proactive notifications for expiring items
+NSmen must currently manage:
+- Unit-specific packing requirements (different units modify standard 10-pack)
+- Expiring field-pack items (FAD, batteries, consumables expire silently)
+- SAF100 acknowledgements
+- Readiness preparation
 
-### Impact
+across scattered communication channels (WhatsApp, PDFs, manual coordination) and fragmented checklists.
 
-- **Reduced Mobilisation Errors**: AI-powered verification catches missing items early
-- **Lower Preparation Stress**: Proactive alerts and buddy support reduce last-minute panic
-- **Improved Unit Coordination**: Commander visibility enables targeted intervention
-- **Increased Readiness**: Average platoon readiness improved from reactive to proactive model
-- **Enhanced NS Confidence**: Operational preparedness becomes measurable and manageable
+Commanders lack centralized readiness visibility and spend significant time manually coordinating personnel before ICT and mobilisation cycles.
+
+### Our Solution (Built on Validated Friction Points)
+
+MOBILISE centralizes preparation workflows into a single readiness platform:
+
+1. **Unit-Specific Smart Mobilisation Checklists** - Version-controlled SOPs with battalion/company overrides
+2. **Expiry Monitoring System** - Proactive FAD/battery/consumables tracking with RED ZONE alerts
+3. **Commander Coordination Dashboard** - Readiness overview, acknowledgement tracking, preparation gaps
+4. **Edge-AI Verification Assistant** - Lightweight offline preparation support (privacy-preserving)
+5. **Buddy Coordination Engine** - Smart equipment sharing within units
+6. **SAF100 Acknowledgement Workflow** - Digital mobilisation confirmation
+7. **Offline Operational Resilience** - Core workflows accessible under limited connectivity
+
+### Operational Impact
+
+**Reduced Friction**:
+- Unit SOP confusion → Clear versioned requirements
+- Silent expiry oversight → Proactive RED ZONE alerts
+- Manual commander chasing → Centralized tracking
+
+**Benefits**:
+- Reduced mobilisation friction
+- Lower administrative overhead
+- Decreased readiness uncertainty
+- Improved unit coordination
+- Enhanced NS confidence through measurable preparedness
 
 ---
 
@@ -192,28 +208,32 @@ MOBILISE provides:
 
 **Problem Addressed**: "Design a web application that enhances the NS experience by making key moments more engaging and supportive (e.g., streamlining field-pack verification in a Mobilisation)"
 
-**Our Solution**:
-- ✅ **Field-Pack Verification**: Edge-AI scanning with offline capability
-- ✅ **Mobilisation Streamlining**: SAF100 digital acknowledgement flow
-- ✅ **Supportive Experience**: Buddy coordination for equipment sharing
-- ✅ **Engaging Moments**: Gamified readiness scores and visual heatmaps
-- ✅ **Camaraderie**: Unit-based buddy system builds team support
+**Our Solution** (Operationally Validated):
+- ✅ **Field-Pack Verification**: Unit-specific checklists + offline Edge-AI assistance
+- ✅ **Mobilisation Streamlining**: SAF100 digital acknowledgement + expiry tracking
+- ✅ **Supportive Experience**: Commander coordination reduces admin burden
+- ✅ **Engaging Moments**: Visual readiness heatmaps and RED ZONE alerts
+- ✅ **Camaraderie**: Buddy coordination transforms unit support into practical equipment sharing
+
+**Positioning**: Students who deeply studied operational friction, NOT students pretending to build military infrastructure.
 
 ### 2. Originality ✅
 
-**Novel Aspects**:
-- **Edge-AI Verification**: First offline-capable field pack scanner for NS
+**Novel Aspects** (Built on Real Friction Points):
+- **Unit-Specific Dynamic Checklists**: Version-controlled SOPs (solves fragmentation)
+- **Expiry Monitoring with RED ZONE**: Proactive FAD/battery tracking (solves silent expiry)
+- **Commander Coordination Dashboard**: Centralized readiness tracking (solves manual chasing)
+- **Offline Edge-AI Verification**: Privacy-preserving on-device processing
 - **Buddy Coordination Engine**: Proximity-based equipment matching within units
-- **Commander Readiness Heatmaps**: Visual platoon-level operational analytics
-- **Distributed Readiness System**: Not a simple checklist - a coordination platform
-- **Offline-First Design**: Recognizes restricted-connectivity operational environments
+- **Integrated SAF100 Workflow**: Shows operational understanding
 
 **Differentiators**:
-- ❌ NOT a generic productivity app
-- ❌ NOT a simple checklist tool
-- ✅ Defence-oriented operational infrastructure
+- ❌ NOT AI-first tech demo
+- ❌ NOT generic checklist app
+- ✅ Operationally grounded defence solution
+- ✅ Built on validated community evidence
 - ✅ Commander + NSman dual perspectives
-- ✅ Unit-level coordination (not just individual tracking)
+- ✅ Realistic, believable implementation
 
 ### 3. Feasibility ✅
 
@@ -236,21 +256,24 @@ MOBILISE provides:
 - Progressive Web App (PWA) for mobile-first delivery
 
 **Why Feasible**:
+- ✅ Uses mature technologies (Next.js, TensorFlow Lite, PostgreSQL)
 - ✅ No specialized hardware required
-- ✅ Existing web infrastructure compatible
-- ✅ Technologies deployable today
+- ✅ Browser-compatible deployment
 - ✅ Scalable architecture (handles 100K+ users)
 - ✅ Offline capability reduces infrastructure dependency
+- ✅ Phased rollout: Pilot company → battalion → brigade
+- ✅ Synthetic datasets for AI training (no sensitive data needed)
 
 ---
 
 ## Competitive Advantages
 
-1. **Operational Focus**: Built for defence operations, not adapted from consumer apps
-2. **Edge-AI Offline**: Works in restricted connectivity (training areas, ships, camps)
-3. **Unit Coordination**: Buddy system strengthens camaraderie while solving practical problems
-4. **Commander Visibility**: Enables proactive intervention, not reactive firefighting
-5. **Realistic Design**: Professional military aesthetics, not gaming/consumer UI
+1. **Real Friction Points**: Built on validated operational pain points, not assumptions
+2. **Commander Dashboard**: Strongest differentiator - most teams ignore unit coordination
+3. **Security & Privacy**: Edge-AI privacy-preserving + most teams forget security slide
+4. **Offline Resilience**: Works in restricted connectivity (training areas, ships, camps)
+5. **Operational Realism**: Professional military aesthetics, believable defence-tech proposal
+6. **Feature Prioritization**: Unit checklists FIRST, AI assistance second (not AI-first hype)
 
 ---
 
@@ -319,15 +342,16 @@ npm run dev
 
 MOBILISE is not a checklist app.
 
-It is a **distributed operational readiness infrastructure platform** designed to improve mobilisation preparedness, coordination, and resilience for the modern NS ecosystem.
+It is a **centralized operational readiness platform** designed to address validated friction points in NS mobilisation workflows.
 
-By combining Edge-AI verification, commander analytics, and unit-level buddy coordination, MOBILISE transforms readiness from reactive preparation into proactive operational confidence.
+By solving unit SOP fragmentation, expired equipment oversight, and commander administrative burden, MOBILISE transforms readiness from reactive preparation into proactive operational confidence.
 
-**Operational Readiness Begins Before Mobilisation.**
+**From Notification to Combat-Ready.**
 
-🚀 Built with precision for defence operations  
+🎯 Built on real operational friction points  
 🛡️ Designed for the modern NS force  
-🤝 Strengthening unit camaraderie through coordination
+🤝 Strengthening unit camaraderie through coordination  
+🔒 Privacy-preserving offline-capable architecture
 
 ---
 

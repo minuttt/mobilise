@@ -2,9 +2,9 @@
 
 # 🛡️ MOBILISE
 
-### Distributed Operational Readiness System for NS Mobilisation
+### Smart Mobilisation Preparation & Readiness Platform
 
-*"Operational Readiness Begins Before Mobilisation"*
+*"From Notification to Combat-Ready"*
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
@@ -19,41 +19,50 @@
 
 ## 🎯 Overview
 
-**MOBILISE** is a cutting-edge web application that transforms NS mobilisation preparation from reactive coordination into **proactive operational confidence**. Built for **CODE_EXP 2026** (BrainHack), it addresses the critical challenge of streamlining field-pack verification and mobilisation readiness.
+**MOBILISE** is a web application that transforms NS mobilisation preparation from reactive coordination into **proactive operational confidence**. Built for **CODE_EXP 2026** (BrainHack), it addresses validated operational friction points in mobilisation workflows.
 
-### ✨ Key Features
+**Core Problem**: Existing mobilisation preparation workflows are fragmented, inconsistent, and difficult to track. NSmen manage unit-specific requirements, expiring equipment, and SAF100 acknowledgements across scattered channels. Commanders manually chase readiness through WhatsApp and spreadsheets.
 
-| Feature | Description |
-|---------|-------------|
-| 🤖 **Edge-AI Pack Verification** | Offline-capable AI-powered equipment scanning with 92-98% confidence |
-| 📊 **Readiness Dashboard** | Real-time operational readiness tracking with 78% score visualization |
-| 🎖️ **Commander Dashboard** | Platoon-level readiness heatmaps and analytics for 8+ personnel |
-| 🤝 **Buddy Coordination** | Smart equipment sharing within 1.2-4.5km proximity |
-| ✅ **SAF100 Digital Flow** | Streamlined mobilisation acknowledgement process |
-| 🔔 **Operational Alerts** | Critical notifications with expiry tracking and RED warnings |
-| 📋 **Equipment Checklist** | Comprehensive tracking across 4 categories (32 items) |
+**Solution**: Centralized preparation workflows built on real operational friction points.
+
+### ✨ Key Features (Prioritized by Operational Impact)
+
+| Feature | Description | Solves |
+|---------|-------------|---------|
+| 📋 **Unit-Specific Checklists** | Version-controlled SOPs with battalion/company overrides | Unit SOP fragmentation |
+| 🚨 **Expiry Monitoring System** | Proactive FAD/battery tracking with RED ZONE alerts | Silent equipment expiry |
+| 🎖️ **Commander Dashboard** | Readiness heatmaps, acknowledgement tracking, preparation gaps | Manual admin chasing |
+| 🤖 **Edge-AI Verification** | Offline privacy-preserving equipment scanning (92-98% confidence) | Preparation assistance |
+| 🤝 **Buddy Coordination** | Smart equipment sharing within 1.2-4.5km proximity | Equipment shortages |
+| ✅ **SAF100 Digital Flow** | Streamlined mobilisation acknowledgement process | Acknowledgement tracking |
+| 🔔 **Operational Alerts** | Critical notifications with countdown timers | Preparation awareness |
+| 🔒 **Offline Resilience** | Core workflows accessible under limited connectivity | Connectivity dependency |
 
 ---
 
 ## 🎨 Design System
 
-### Modern Glassmorphism UI
+### Modern NS-Themed Professional UI
 
-- **Backdrop Blur Effects** - Professional glassmorphism with 10-20px blur
-- **Radial Gradients** - Ambient background lighting for depth
-- **Shadow Layers** - Multi-level shadows for elevation hierarchy
-- **Animated Elements** - Smooth transitions, hover effects, and shimmer animations
-- **Color Palette** - Military-inspired with transparency
+- **Glassmorphism Effects** - Professional backdrop-blur with military aesthetics
+- **Operational Color Palette** - SAF-inspired colors with strategic visual hierarchy
+- **Refined Typography** - Inter font with tabular numbers for readiness scores
+- **Micro-Interactions** - Purposeful animations (gradient-shift, pulse-glow, hover-lift)
+- **Accessibility** - WCAG AA compliant (4.5:1 contrast, 44px touch targets)
 
-### Color Scheme
+### Color Scheme (NS-Themed)
 
 ```css
 Primary:     #1E3A5F (Navy Blue - Operational Authority)
-Accent:      #059669 (Operational Green - Readiness)
+Accent:      #059669 (SAF Green - Readiness/Success)
 Secondary:   #2563EB (Bright Blue - Actions)
+Destructive: #DC2626 (RED ZONE - Critical Alerts)
+Warning:     #F59E0B (Amber - Expiry Warnings)
 Background:  Radial Gradient (0A0E17 → 1a1f2e → 000000)
-Glass Cards: rgba(17, 24, 39, 0.7) + backdrop-blur
+Glass Cards: rgba(17, 24, 39, 0.7) + backdrop-blur(16px)
 ```
+
+**Design Philosophy**: Professional military aesthetics, NOT gaming/cyberpunk. One-glance readability for high-stress scenarios.
 
 ---
 
@@ -92,33 +101,89 @@ cd mobilise
 # Install dependencies
 npm install
 
-```bash
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Test Flow
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Click "Login with Singpass" on landing page
+2. Explore Dashboard → 78% readiness score
+3. Try "Verify Pack" → Scan simulation → Results
+4. Check "Checklist" → Equipment categories with RED ZONE expiry tracking
+5. View "Commander" → Platoon heatmap and analytics (**strongest differentiator**)
+6. Explore "Buddy" → Equipment coordination matches
+7. Review "Alerts" → 3 unread operational notifications
+8. Complete "Acknowledge" → SAF100 confirmation flow
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🏆 About CODE_EXP 2026
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Competition**: BrainHack 2026 - CODE_EXP  
+**Problem Statement**: Mission Service Edge (NS Experience Enhancement)  
+**Challenge**: Streamline field-pack verification in mobilisation  
+**Submission Deadline**: 12:00 noon, 21 May 2026
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Positioning**: Students who deeply studied operational friction, NOT students pretending to build military infrastructure.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📖 Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **[SUBMISSION.md](SUBMISSION.md)** - Complete submission documentation
+- **[plansubmissiondraft.txt](../plansubmissiondraft.txt)** - Slide deck structure + video script
+- **[DEPLOYMENT_GUIDE.md](../DEPLOYMENT_GUIDE.md)** - Vercel deployment instructions
+
+---
+
+## 🛡️ Competitive Advantages
+
+1. **Real Friction Points** - Built on validated operational pain points
+2. **Commander Dashboard** - Strongest differentiator (unit coordination)
+3. **Security & Privacy** - Edge-AI privacy-preserving + security slide
+4. **Offline Resilience** - Works in restricted connectivity environments
+5. **Feature Prioritization** - Unit checklists FIRST, AI assistance second
+
+---
+
+## 📊 Technical Stack
+
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **Frontend** | Next.js 14 (App Router) | Server-side rendering, routing |
+| **Language** | TypeScript 5.0 | Type-safe development |
+| **Styling** | Tailwind CSS 3.4 | NS-themed glassmorphism |
+| **Design** | Inter Font + Custom Animations | Professional military aesthetics |
+| **AI (Architecture)** | TensorFlow Lite | Privacy-preserving offline verification |
+| **Backend (Architecture)** | FastAPI + PostgreSQL | Readiness logic, coordination workflows |
+
+---
+
+## 🎯 Project Positioning
+
+**MOBILISE is not a checklist app.**
+
+It is a **centralized operational readiness platform** designed to address validated friction points:
+1. Unit SOP fragmentation
+2. Expired equipment oversight
+3. Commander administrative burden
+
+By solving real operational problems with realistic technology, MOBILISE transforms readiness from reactive preparation into proactive operational confidence.
+
+**From Notification to Combat-Ready.**
+
+---
+
+## 📝 License
+
+Proprietary - CODE_EXP 2026 Submission
+
+---
+
+**Built with precision for CODE_EXP 2026**  
+🎯 Real operational friction points  
+🛡️ Believable defence-tech proposal  
+🤝 Commander + NSman dual perspectives

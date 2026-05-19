@@ -17,14 +17,14 @@ export default function DashboardPage() {
       </div>
 
       {/* Header */}
-      <header className="military-gradient p-6 pb-10 relative z-10">
+      <header className="military-gradient p-6 pb-12 relative z-10">
         <div className="max-w-7xl mx-auto space-y-6">
           <div className="flex items-center justify-between">
-            <div className="space-y-1">
-              <h1 className="text-3xl font-extrabold text-foreground tracking-tight">Readiness Dashboard</h1>
-              <p className="text-sm text-foreground-muted font-medium">SGT John Tan • 3SIR</p>
+            <div className="space-y-2">
+              <h1 className="text-4xl font-extrabold text-foreground tracking-tight leading-tight">Readiness Dashboard</h1>
+              <p className="text-sm text-foreground-muted font-semibold tracking-wide">SGT John Tan • 3SIR • Bravo Company</p>
             </div>
-            <Link href="/commander" className="touch-target p-3 rounded-xl button-glass backdrop-blur-sm transition-all duration-300 hover:scale-105 group">
+            <Link href="/commander" className="touch-target p-3 rounded-xl button-glass backdrop-blur-sm transition-all duration-300 hover:scale-105 active:scale-95 group">
               <svg className="w-6 h-6 text-accent group-hover:text-accent-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
@@ -32,38 +32,39 @@ export default function DashboardPage() {
           </div>
 
           {/* Readiness Score Card */}
-          <div className="glass-card p-8 relative overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div className="glass-premium p-9 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/12 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <div className="flex items-center justify-between relative z-10">
               <div className="flex-1">
-                <div className="flex items-center space-x-3 mb-3">
-                  <p className="text-sm text-foreground-muted font-semibold tracking-wide uppercase">Overall Readiness</p>
-                  <div className="metric-badge px-2 py-0.5 rounded-full text-xs font-bold text-accent">Active</div>
+                <div className="flex items-center space-x-3 mb-4">
+                  <p className="text-sm text-foreground-muted font-bold tracking-wider uppercase">Overall Readiness</p>
+                  <div className="metric-badge px-3 py-1 rounded-full text-xs font-bold text-accent border border-accent/30">Active</div>
                 </div>
-                <div className="flex items-baseline space-x-3 mb-6">
-                  <span className="text-6xl font-extrabold gradient-text stat-number">{readinessScore}%</span>
-                  <div className="space-y-0.5">
-                    <span className="block text-sm text-foreground font-semibold">Operational Ready</span>
-                    <span className="block text-xs text-accent font-medium">↗ +5% from last week</span>
+                <div className="flex items-baseline space-x-4 mb-7">
+                  <span className="text-7xl font-extrabold gradient-text-glow stat-number" style={{letterSpacing: '-0.04em'}}>{readinessScore}%</span>
+                  <div className="space-y-1">
+                    <span className="block text-base text-foreground font-bold">Operational Ready</span>
+                    <span className="block text-sm text-accent font-semibold">↗ +5% from last week</span>
                   </div>
                 </div>
                 <div className="relative progress-glow">
-                  <div className="w-full h-4 bg-background-elevated/60 rounded-full overflow-hidden backdrop-blur-sm border border-border/20">
+                  <div className="w-full h-5 bg-background-elevated/70 rounded-full overflow-hidden backdrop-blur-md border border-border/30 shadow-inner">
                     <div
-                      className="h-full bg-gradient-to-r from-accent via-accent-light to-accent rounded-full transition-all duration-1000 ease-out shadow-accent relative overflow-hidden"
+                      className="h-full bg-gradient-to-r from-accent via-accent-light to-accent rounded-full transition-all duration-1200 ease-out shadow-accent-glow relative overflow-hidden"
                       style={{ width: `${readinessScore}%` }}
                     >
                       <div className="absolute inset-0 shimmer"></div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-b from-white/15 to-transparent"></div>
                     </div>
                   </div>
-                  <div className="absolute -top-1 -bottom-1 rounded-full bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 blur-sm transition-all duration-1000" style={{ width: `${readinessScore}%`, left: 0 }}></div>
+                  <div className="absolute -top-1.5 -bottom-1.5 rounded-full bg-gradient-to-r from-accent/0 via-accent/35 to-accent/0 blur-md transition-all duration-1200" style={{ width: `${readinessScore}%`, left: 0 }}></div>
                 </div>
               </div>
-              <div className="ml-8 relative">
-                <div className="absolute inset-0 bg-accent/20 rounded-2xl blur-xl animate-pulse-slow"></div>
-                <div className="relative w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-accent/20">
-                  <svg className="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="ml-10 relative">
+                <div className="absolute inset-0 bg-accent/25 rounded-3xl blur-2xl animate-pulse-slow"></div>
+                <div className="relative w-24 h-24 bg-gradient-to-br from-accent/25 to-accent/8 rounded-3xl flex items-center justify-center backdrop-blur-md border border-accent/30 shadow-accent">
+                  <svg className="w-14 h-14 text-accent drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
@@ -76,20 +77,20 @@ export default function DashboardPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-6 space-y-6 relative z-10">
         {/* ICT Countdown */}
-        <div className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300">
+        <div className="glass-card p-7 hover:shadow-glass-lg transition-all duration-300 hover:border-primary/40">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-5">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center shadow-lg">
-                <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center space-x-6">
+              <div className="w-18 h-18 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center shadow-lg border border-primary/30">
+                <svg className="w-10 h-10 text-white drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
               <div>
-                <p className="text-sm text-foreground-muted font-semibold mb-1">Next ICT</p>
-                <p className="text-3xl font-extrabold text-foreground">{ictDays} <span className="text-xl text-foreground-muted font-semibold">days</span></p>
+                <p className="text-sm text-foreground-muted font-bold mb-2 tracking-wide uppercase">Next ICT</p>
+                <p className="text-4xl font-extrabold text-foreground stat-number">{ictDays} <span className="text-2xl text-foreground-muted font-bold">days</span></p>
               </div>
             </div>
-            <Link href="/acknowledge" className="px-6 py-3 bg-gradient-to-r from-accent to-accent-dark text-white rounded-xl font-bold hover:from-accent-light hover:to-accent transition-all duration-300 transform hover:scale-105 shadow-accent">
+            <Link href="/acknowledge" className="px-7 py-3.5 bg-gradient-to-r from-accent via-accent to-accent-dark text-white rounded-xl font-bold hover:from-accent-light hover:to-accent transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-accent hover:shadow-accent-glow text-base">
               Review
             </Link>
           </div>
