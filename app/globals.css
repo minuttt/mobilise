@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @import "tailwindcss";
 
@@ -7,28 +7,31 @@
     border-color: rgba(71, 85, 105, 0.3);
   }
   body {
-    background: radial-gradient(ellipse at top, #1e293b 0%, #0f172a 40%, #020617 100%);
+    background: linear-gradient(180deg, #0a0e1a 0%, #060810 50%, #000000 100%);
     background-attachment: fixed;
-    color: #F8FAFC;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-feature-settings: 'cv11', 'ss01', 'ss02';
+    color: #E2E8F0;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'ss01', 'ss02';
     font-variant-numeric: tabular-nums;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Enhanced typography for operational readability */
+  /* Enhanced typography - Outfit for UI, JetBrains Mono for metrics */
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    line-height: 1.2;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
   }
 
-  /* Tabular numbers for readiness scores */
-  .stat-number {
+  /* Tabular numbers for readiness scores - use JetBrains Mono */
+  .stat-number, .metric-display {
+    font-family: 'JetBrains Mono', monospace;
     font-variant-numeric: tabular-nums;
-    font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum', 'zero';
+    font-weight: 700;
   }
 }
 
@@ -41,11 +44,12 @@
     justify-content: center;
   }
 
+  /* Command Center Header - Tactical Navy with Cyan Accent */
   .military-gradient {
-    background: linear-gradient(135deg, rgba(26, 54, 93, 0.96) 0%, rgba(15, 39, 68, 0.98) 100%);
-    backdrop-filter: blur(24px) saturate(180%);
-    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    border-bottom: 1px solid rgba(71, 85, 105, 0.2);
+    background: linear-gradient(135deg, rgba(15, 23, 41, 0.95) 0%, rgba(10, 14, 26, 0.98) 100%);
+    backdrop-filter: blur(20px) saturate(160%);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(6, 182, 212, 0.1);
+    border-bottom: 1px solid rgba(6, 182, 212, 0.15);
   }
 
   .operational-glow {
@@ -70,20 +74,23 @@
     border-color: rgba(5, 150, 105, 0.3);
   }
 
+  /* Tactical Command Glass - Sharp & Precise */
   .glass-card {
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(148, 163, 184, 0.12);
-    border-radius: 1.25rem;
-    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4),
-                0 1px 2px 0 rgba(0, 0, 0, 0.2),
-                inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+    background: rgba(15, 23, 41, 0.75);
+    backdrop-filter: blur(16px) saturate(150%);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
+                0 1px 2px 0 rgba(6, 182, 212, 0.1),
+                inset 0 1px 0 0 rgba(6, 182, 212, 0.05);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glass-card:hover {
-    background: rgba(15, 23, 42, 0.85);
-    border-color: rgba(148, 163, 184, 0.18);
+    background: rgba(15, 23, 41, 0.85);
+    border-color: rgba(6, 182, 212, 0.35);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6),
+                0 0 30px 0 rgba(6, 182, 212, 0.15);
   }
 
   .stat-card {
@@ -388,44 +395,72 @@
     opacity: 1;
   }
 
-  /* Enhanced gradient text with richer colors */
-  .gradient-text-premium {
+  /* Tactical Cyan Gradient - Distinctive Command Center Aesthetic */
+  .gradient-text-command {
     background: linear-gradient(135deg,
-      #34D399 0%,
-      #10B981 30%,
-      #059669 60%,
-      #047857 100%
+      #22d3ee 0%,
+      #06b6d4 40%,
+      #0891b2 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     background-size: 200% 200%;
-    animation: gradient-shift 12s ease infinite;
-    filter: drop-shadow(0 0 16px rgba(16, 185, 129, 0.4));
+    animation: gradient-shift 10s ease infinite;
+    filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.5));
   }
 
-  /* Premium card with all enhancements */
-  .glass-exhibition {
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(24px) saturate(200%);
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    border-radius: 1.5rem;
-    box-shadow:
-      0 20px 70px 0 rgba(0, 0, 0, 0.5),
-      0 5px 15px 0 rgba(0, 0, 0, 0.35),
-      inset 0 2px 4px 0 rgba(255, 255, 255, 0.08),
-      inset 0 -2px 4px 0 rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Sharp tactical borders */
+  .tactical-border {
+    position: relative;
+    border: 1px solid rgba(6, 182, 212, 0.3);
   }
 
-  .glass-exhibition:hover {
-    background: rgba(15, 23, 42, 0.9);
-    border-color: rgba(148, 163, 184, 0.25);
-    transform: translateY(-2px);
+  .tactical-border::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg,
+      rgba(34, 211, 238, 0.4) 0%,
+      transparent 40%,
+      transparent 60%,
+      rgba(6, 182, 212, 0.4) 100%
+    );
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+
+  .tactical-border:hover::before {
+    opacity: 1;
+  }
+
+  /* Command Center Display - Sharp Tactical Glass */
+  .glass-command {
+    background: rgba(15, 23, 41, 0.85);
+    backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    border-radius: 0.75rem;
     box-shadow:
-      0 30px 90px 0 rgba(0, 0, 0, 0.6),
-      0 10px 25px 0 rgba(0, 0, 0, 0.4),
-      inset 0 2px 4px 0 rgba(255, 255, 255, 0.1);
+      0 16px 60px 0 rgba(0, 0, 0, 0.6),
+      0 4px 12px 0 rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(6, 182, 212, 0.1) inset,
+      0 1px 0 0 rgba(6, 182, 212, 0.15) inset;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-command:hover {
+    background: rgba(15, 23, 41, 0.95);
+    border-color: rgba(6, 182, 212, 0.4);
+    transform: translateY(-1px);
+    box-shadow:
+      0 20px 70px 0 rgba(0, 0, 0, 0.7),
+      0 8px 20px 0 rgba(0, 0, 0, 0.5),
+      0 0 40px 0 rgba(6, 182, 212, 0.2);
   }
 
   /* Enhanced button with premium treatment */
@@ -492,26 +527,34 @@
     border-radius: 1px;
   }
 
-  /* Fluid typography with optical sizing */
+  /* Fluid typography - FIXED for proper responsive scaling */
   .text-fluid-hero {
-    font-size: clamp(3rem, 7vw + 1rem, 7rem);
+    font-size: clamp(2.5rem, 12vw, 5rem);
     font-weight: 900;
-    line-height: 0.95;
-    letter-spacing: -0.045em;
-    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-family: 'Outfit', sans-serif;
     text-rendering: optimizeLegibility;
   }
 
+  .text-fluid-score {
+    font-size: clamp(3rem, 14vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
   .text-fluid-title {
-    font-size: clamp(2rem, 4vw + 0.5rem, 4rem);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: 800;
     line-height: 1.1;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
   }
 
   .text-fluid-body {
-    font-size: clamp(0.875rem, 1vw + 0.5rem, 1.125rem);
-    line-height: 1.6;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.5;
   }
 
   /* Icon gradient treatment */

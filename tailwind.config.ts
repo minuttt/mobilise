@@ -9,58 +9,60 @@ export default {
   theme: {
     extend: {
       colors: {
-        // SAF-inspired operational colors
+        // Precision Command Center Aesthetic - Deep Navy + Electric Cyan
         primary: {
-          DEFAULT: '#1A365D', // Deep Navy (SAF Authority)
-          light: '#2C5282',
-          dark: '#0F2744',
+          DEFAULT: '#0F1729', // Command Center Navy
+          light: '#1a2642',
+          dark: '#08090f',
         },
         secondary: {
-          DEFAULT: '#3B82F6', // Bright Blue (Action)
-          light: '#60A5FA',
-          dark: '#2563EB',
+          DEFAULT: '#1e3a5f', // Tactical Blue
+          light: '#2d5280',
+          dark: '#0f1d3a',
         },
         accent: {
-          DEFAULT: '#059669', // SAF Green (Readiness)
-          light: '#10B981',
-          dark: '#047857',
-          '400': '#34D399', // Richer saturated variants
-          '500': '#10B981',
-          '600': '#059669',
-          '700': '#047857',
+          DEFAULT: '#06b6d4', // Electric Cyan (Command)
+          light: '#22d3ee',
+          dark: '#0891b2',
+          '400': '#22d3ee',
+          '500': '#06b6d4',
+          '600': '#0891b2',
+          '700': '#0e7490',
         },
         background: {
-          DEFAULT: '#0A0E17', // Deep space
-          card: 'rgba(15, 23, 42, 0.75)', // Richer card bg
-          elevated: 'rgba(30, 41, 59, 0.65)',
+          DEFAULT: '#0a0e1a', // Deep Command Black
+          card: 'rgba(15, 23, 41, 0.8)', // Navy card bg
+          elevated: 'rgba(30, 58, 95, 0.4)',
         },
         foreground: {
-          DEFAULT: '#F8FAFC', // Crisp white
-          muted: '#94A3B8', // Slate gray
-          dim: '#64748B',
+          DEFAULT: '#E2E8F0', // Tactical White
+          muted: '#94a3b8',
+          dim: '#64748b',
         },
         border: {
-          DEFAULT: 'rgba(71, 85, 105, 0.3)',
-          light: 'rgba(100, 116, 139, 0.4)',
+          DEFAULT: 'rgba(6, 182, 212, 0.2)', // Cyan borders
+          light: 'rgba(34, 211, 238, 0.3)',
         },
         destructive: {
-          DEFAULT: '#DC2626', // RED ZONE
-          light: '#EF4444',
-          dark: '#B91C1C',
+          DEFAULT: '#ef4444', // Alert Red
+          light: '#f87171',
+          dark: '#dc2626',
         },
         success: {
-          DEFAULT: '#059669', // Match accent
-          light: '#10B981',
-          dark: '#047857',
+          DEFAULT: '#06b6d4', // Cyan success
+          light: '#22d3ee',
+          dark: '#0891b2',
         },
         warning: {
-          DEFAULT: '#F59E0B', // Amber alert
-          light: '#FBBF24',
-          dark: '#D97706',
+          DEFAULT: '#f59e0b', // Tactical Amber
+          light: '#fbbf24',
+          dark: '#d97706',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Outfit', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Consolas', 'monospace'],
+        display: ['Outfit', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

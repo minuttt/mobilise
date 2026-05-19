@@ -23,45 +23,42 @@ export default function LoginPage() {
 
       <div className="w-full max-w-md space-y-8 animate-fade-in relative z-10">
         {/* Logo Section */}
-        <div className="text-center space-y-7">
-          <div className="flex justify-center mb-8">
+        <div className="text-center space-y-6">
+          <div className="flex justify-center mb-6">
             <div className="relative group cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent-400/40 to-accent-600/30 rounded-3xl blur-2xl animate-glow-pulse"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-accent-500/30 to-secondary/30 rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              <div className="relative w-28 h-28 bg-gradient-to-br from-accent-400 via-accent-500 to-accent-700 rounded-3xl flex items-center justify-center transform rotate-3 group-hover:rotate-0 group-hover:scale-110 transition-all duration-500 shadow-glass-xl shadow-glow-intense border border-accent-400/40 gradient-border-animated">
-                <svg className="w-16 h-16 text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="absolute inset-0 bg-accent/30 rounded-xl blur-2xl animate-pulse-slow"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-secondary/30 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-accent via-accent-600 to-accent-700 rounded-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 border border-accent/40 shadow-lg shadow-accent/30">
+                <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
             </div>
           </div>
-          <div className="space-y-4">
-            <h1 className="text-fluid-hero gradient-text-premium mb-3">MOBILISE</h1>
-            <div className="h-1 w-40 mx-auto bg-gradient-to-r from-transparent via-accent-500 to-transparent opacity-90 shadow-accent"></div>
-            <p className="text-fluid-body text-foreground-muted font-semibold tracking-wide">Smart Mobilisation Preparation & Readiness Platform</p>
-            <p className="text-accent-500 text-base font-bold italic tracking-wide animate-glow-pulse">"From Notification to Combat-Ready"</p>
+          <div className="space-y-3 px-4">
+            <h1 className="text-fluid-hero gradient-text-command font-display">MOBILISE</h1>
+            <div className="h-0.5 w-24 sm:w-32 mx-auto bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+            <p className="text-sm sm:text-base text-foreground-muted font-medium max-w-md mx-auto">Smart Mobilisation Preparation & Readiness Platform</p>
+            <p className="text-xs sm:text-sm text-accent font-semibold tracking-wide">"From Notification to Combat-Ready"</p>
           </div>
         </div>
 
-        {/* Login Card */}
-        <div className="glass-exhibition p-9 space-y-7 shadow-glass-xl relative overflow-hidden group gradient-border-animated">
-          {/* Noise texture for premium feel */}
-          <div className="absolute inset-0 bg-noise opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
+        {/* Login Card - Tactical Command Style */}
+        <div className="glass-command p-6 sm:p-8 space-y-6 relative overflow-hidden group tactical-border">
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-          <div className="absolute inset-0 bg-gradient-to-br from-accent-500/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-
-          <div className="space-y-3 relative z-10">
-            <h2 className="text-fluid-title text-foreground">Secure Access</h2>
-            <p className="text-fluid-body text-foreground-muted leading-relaxed font-medium">Authentication required for operational access</p>
+          <div className="space-y-2 relative z-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-display">Secure Access</h2>
+            <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">Authentication required for operational access</p>
           </div>
 
-          <div className="space-y-6 relative z-10">
+          <div className="space-y-5 relative z-10">
             <button
               onClick={handleLogin}
               disabled={isLoading}
-              className="group/btn w-full touch-target button-premium py-5 px-7 rounded-xl text-white font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none"
+              className="group/btn w-full py-4 px-6 bg-gradient-to-r from-accent via-accent-600 to-accent-700 hover:from-accent-400 hover:via-accent-500 hover:to-accent-600 text-white font-bold text-base rounded-lg transition-all duration-300 transform hover:scale-[1.02] active:scale-98 disabled:opacity-50 disabled:cursor-not-allowed border border-accent/50 shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/40 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1500 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/25 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000 pointer-events-none"></div>
               {isLoading ? (
                 <span className="flex items-center justify-center relative z-10">
                   <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-white" fill="none" viewBox="0 0 24 24">
@@ -80,20 +77,20 @@ export default function LoginPage() {
               )}
             </button>
 
-            <div className="pt-4 border-t border-border/50">
-              <p className="text-xs text-foreground-dim text-center leading-relaxed">
-                🔒 Secure authentication powered by National Digital Identity
+            <div className="pt-3 border-t border-border">
+              <p className="text-xs text-foreground-dim text-center">
+                🔒 Secure authentication via National Digital Identity
               </p>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="text-center space-y-4 pt-6">
-          <p className="text-base text-foreground-muted font-semibold italic tracking-wide">
+        <div className="text-center space-y-3 pt-4 px-4">
+          <p className="text-xs sm:text-sm text-foreground-muted font-medium italic">
             "From Notification to Combat-Ready"
           </p>
-          <div className="flex items-center justify-center space-x-3 text-sm text-foreground-dim font-medium">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-foreground-dim">
             <span>v1.0.0</span>
             <span>•</span>
             <span>CODE_EXP 2026</span>
