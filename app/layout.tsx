@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MOBILISE - Operational Readiness System",
-  description: "Distributed Operational Readiness System for NS Mobilisation",
+  title: "MOBILISE - Smart Mobilisation Platform",
+  description: "Mobilisation preparation and readiness platform designed around validated NS workflow friction points",
 };
 
 export default function RootLayout({

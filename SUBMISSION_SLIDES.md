@@ -1,7 +1,7 @@
 # MOBILISE - VALUE PROPOSITION SLIDE DECK
 ## CODE_EXP 2026 Submission
 
-**Total Slides**: 15 (Maximum allowed)
+**Total Slides**: 16 (Added Ground Reality Validation slide — worth it for credibility)
 **Format**: PDF Slide Deck
 **Purpose**: Demonstrate value, feasibility, and operational impact
 
@@ -78,7 +78,34 @@
 
 ---
 
-# SLIDE 4 — WHY CURRENT SYSTEMS FAIL
+# SLIDE 4 — GROUND REALITY VALIDATION
+
+## Research Methodology: Identified Recurring Operational Friction
+
+We studied real NSmen discussions, mobilisation experiences, and operational preparation workflows across multiple units.
+
+### Friction Point Mapping
+
+| Observed Friction | Operational Impact | MOBILISE Response |
+|-------------------|-------------------|-------------------|
+| Unit-specific SOP variation | Preparation confusion | Dynamic unit checklists |
+| Silent FAD expiry | Failed readiness checks | Expiry monitoring with RED ZONE alerts |
+| Fragmented communication | High admin burden | Commander coordination dashboard |
+| Manual acknowledgement tracking | Coordination delays | Digital SAF100 workflow |
+| Scattered preparation systems | Readiness uncertainty | Centralized readiness platform |
+
+### Validation Approach
+
+**NOT**: Students inventing military problems  
+**YES**: Students who identified real workflow friction
+
+This is a **logistics and readiness coordination platform** designed around validated NS preparation workflows — not a military AI super-system.
+
+**Visual**: Table showing friction → impact → solution mapping with icons
+
+---
+
+# SLIDE 5 — WHY CURRENT SYSTEMS FAIL
 
 ## Current workflows rely on fragmented tools:
 
@@ -103,7 +130,7 @@
 
 ---
 
-# SLIDE 5 — INTRODUCING MOBILISE
+# SLIDE 6 — INTRODUCING MOBILISE
 
 ## A centralized operational readiness platform
 
@@ -138,7 +165,7 @@
 
 ---
 
-# SLIDE 6 — FEATURE 1: UNIT-SPECIFIC SMART CHECKLISTS
+# SLIDE 7 — FEATURE 1: UNIT-SPECIFIC SMART CHECKLISTS
 
 ## Solves: Unit SOP Fragmentation
 
@@ -162,7 +189,7 @@
 
 ---
 
-# SLIDE 7 — FEATURE 2: EXPIRY MONITORING WITH RED ZONE ALERTS
+# SLIDE 8 — FEATURE 2: EXPIRY MONITORING WITH RED ZONE ALERTS
 
 ## Solves: Silent Equipment Expiry
 
@@ -186,7 +213,7 @@
 
 ---
 
-# SLIDE 8 — FEATURE 3: COMMANDER COORDINATION DASHBOARD
+# SLIDE 9 — FEATURE 3: COMMANDER COORDINATION DASHBOARD
 
 ## Solves: Manual Administrative Burden
 ### **STRONGEST DIFFERENTIATOR**
@@ -213,7 +240,7 @@
 
 ---
 
-# SLIDE 9 — FEATURE 4: PRE-PACK VERIFICATION ASSISTANT
+# SLIDE 10 — FEATURE 4: PRE-PACK VERIFICATION ASSISTANT
 
 ## Practical AI-Assisted Verification
 
@@ -248,31 +275,33 @@
 
 ---
 
-# SLIDE 10 — FEATURE 5: BUDDY COORDINATION & SAF100
+# SLIDE 11 — FEATURE 5: SAF100 WORKFLOW & UNIT SUPPORT
 
-## Smart Unit Coordination
+## Operational Realism + Secondary Coordination
 
-### Buddy System:
-If an NSman lacks equipment (lighter, black tape, batteries), MOBILISE:
-- Identifies nearby assigned buddies
-- Matches available spare items
-- Enables coordination requests
+### SAF100 Digital Acknowledgement (Primary):
+**Shows deep operational understanding**:
+✓ Digital acknowledgement tracking
+✓ 4-step reporting checklist (systematic workflow)
+✓ Mobilisation countdown with milestones
+✓ Contact unit option for deferral requests
+✓ Automated reminder system
 
-**Key Insight**: "Transforming camaraderie into operational coordination"
+**Why This Matters**: Most teams won't include SAF100. This demonstrates we understand actual mobilisation procedures, not just theoretical checklists.
 
-### SAF100 Acknowledgement Integration:
-**Shows operational understanding**:
-✓ Acknowledgement tracking
-✓ Reporting instructions (4-step checklist)
-✓ Mobilisation countdown
-✓ Readiness milestones
-✓ Contact unit option for deferrals
+### Unit Support Coordination (Secondary):
+Optional peer readiness support within sections:
+- Section-level spare item coordination
+- Peer preparation assistance
+- Optional equipment support requests
 
-**Visual**: Split screen - buddy matching interface + SAF100 confirmation flow
+**Positioning**: This is **secondary coordination support**, not core innovation. Keeps focus on primary features (checklists, expiry, commander dashboard).
+
+**Visual**: SAF100 workflow (prominent) + unit support interface (smaller)
 
 ---
 
-# SLIDE 11 — OFFLINE OPERATIONAL RESILIENCE
+# SLIDE 12 — OFFLINE OPERATIONAL RESILIENCE
 
 ## Core workflows remain accessible under limited connectivity
 
@@ -304,7 +333,7 @@ If an NSman lacks equipment (lighter, black tape, batteries), MOBILISE:
 
 ---
 
-# SLIDE 12 — SECURITY & PRIVACY
+# SLIDE 13 — SECURITY & PRIVACY
 
 ## HUGE DIFFERENTIATOR (most teams forget this)
 
@@ -339,7 +368,7 @@ If an NSman lacks equipment (lighter, black tape, batteries), MOBILISE:
 
 ---
 
-# SLIDE 13 — TECHNICAL FEASIBILITY
+# SLIDE 14 — TECHNICAL FEASIBILITY
 
 ## Built with existing technologies deployable today
 
@@ -372,7 +401,7 @@ If an NSman lacks equipment (lighter, black tape, batteries), MOBILISE:
 
 ---
 
-# SLIDE 14 — OPERATIONAL IMPACT
+# SLIDE 15 — OPERATIONAL IMPACT
 
 ## Reduced Friction Across the Mobilisation Cycle
 
@@ -407,7 +436,7 @@ If an NSman lacks equipment (lighter, black tape, batteries), MOBILISE:
 
 ---
 
-# SLIDE 15 — CLOSING & CALL TO ACTION
+# SLIDE 16 — CLOSING & CALL TO ACTION
 
 ## MOBILISE
 ### From Notification to Combat-Ready

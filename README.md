@@ -19,11 +19,11 @@
 
 ## 🎯 Overview
 
-**MOBILISE** is a web application that transforms NS mobilisation preparation from reactive coordination into **proactive operational confidence**. Built for **CODE_EXP 2026** (BrainHack), it addresses validated operational friction points in mobilisation workflows.
+**MOBILISE** is a **mobilisation preparation and readiness platform** designed to streamline ICT and mobilisation workflows for NSmen and commanders. Built for **CODE_EXP 2026** (BrainHack), it addresses validated operational friction points in NS preparation workflows.
 
 **Core Problem**: Existing mobilisation preparation workflows are fragmented, inconsistent, and difficult to track. NSmen manage unit-specific requirements, expiring equipment, and SAF100 acknowledgements across scattered channels. Commanders manually chase readiness through WhatsApp and spreadsheets.
 
-**Solution**: Centralized preparation workflows built on real operational friction points.
+**Solution**: A **logistics and readiness coordination platform** built around validated NS workflow friction points — not a military AI super-system.
 
 ### ✨ Key Features (Prioritized by Operational Impact)
 
@@ -33,7 +33,7 @@
 | 🚨 **Expiry Monitoring System** | Proactive FAD/battery tracking with RED ZONE alerts | Silent equipment expiry |
 | 🎖️ **Commander Dashboard** | Readiness heatmaps, acknowledgement tracking, preparation gaps | Manual admin chasing |
 | 🤖 **Pre-Pack Verification** | Offline AI analyzes equipment layouts before packing (92-98% confidence) | Preparation assistance |
-| 🤝 **Buddy Coordination** | Smart equipment sharing within 1.2-4.5km proximity | Equipment shortages |
+| 🤝 **Unit Support Coordination** | Optional section-level spare item coordination | Secondary preparation support |
 | ✅ **SAF100 Digital Flow** | Streamlined mobilisation acknowledgement process | Acknowledgement tracking |
 | 🔔 **Operational Alerts** | Critical notifications with countdown timers | Preparation awareness |
 | 🔒 **Offline Resilience** | Core workflows accessible under limited connectivity | Connectivity dependency |
